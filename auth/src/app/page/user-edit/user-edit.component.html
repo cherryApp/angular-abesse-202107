@@ -1,1 +1,60 @@
-<p>user-edit works!</p>
+<div class="row">
+  <div class="col-12 col-lg-6 offset-lg-3 mt-3">
+    <form #userForm="ngForm" (ngSubmit)="onSave(userForm, user.id)" *ngIf="user$ | async; let user">
+      <div class="form-group">
+        <label>
+          First Name
+        </label>
+        <input
+          name="firstName"
+          [(ngModel)]="user.firstName"
+          type="text"
+          class="form-control"
+        >
+      </div>
+      <div class="form-group">
+        <label>
+          Last Name
+        </label>
+        <input
+          name="lastName"
+          [(ngModel)]="user.lastName"
+          type="text"
+          class="form-control"
+        >
+      </div>
+      <div class="form-group">
+        <label>
+          Email
+        </label>
+        <input
+          name="email"
+          [(ngModel)]="user.email"
+          type="email"
+          class="form-control"
+          email
+        >
+      </div>
+      <div class="form-group">
+        <label>
+          Role
+        </label>
+        <select
+          name="role"
+          [(ngModel)]="user.role"
+          class="form-control"
+        >
+          <option value="0">Visitor</option>
+          <option value="1">Viewer</option>
+          <option value="2">Editor</option>
+          <option value="3">Admin</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mt-3" [disabled]="userForm.form.invalid">
+        Save
+      </button>
+
+    </form>
+  </div>
+</div>

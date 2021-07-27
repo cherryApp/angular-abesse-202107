@@ -7,4 +7,12 @@
             {{ item.text }}
         </a>
     </div>
+    <div class="pull-right">
+      <a *ngIf="!(user$ | async)" class="nav-item nav-link" routerLink="/login">
+        Login
+      </a>
+      <button (click)="onLogout()" *ngIf="user$ | async" class="nav-item nav-link btn btn-default">
+        Logout
+      </button>
+    </div>
 </nav>

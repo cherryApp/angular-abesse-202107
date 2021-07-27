@@ -7,10 +7,6 @@
     {
       "url": "/user",
       "text": "User"
-    },
-    {
-      "url": "/login",
-      "text": "Login"
     }
   ],
   "users": [
@@ -21,7 +17,8 @@
       "email": "dredan0@usda.gov",
       "address": "29654 Carey Hill",
       "ipAddress": "141.97.91.0",
-      "password": "$2a$10$3GfuaArLil4JnQ6yu/tBEOXjrB81FEFUr7sU6AClcYFuao9yoW61i"
+      "password": "$2a$10$3GfuaArLil4JnQ6yu/tBEOXjrB81FEFUr7sU6AClcYFuao9yoW61i",
+      "role": 3
     },
     {
       "id": 2,
@@ -30,7 +27,8 @@
       "email": "sdracey1@latimes.com",
       "address": "46 Prairie Rose Circle",
       "ipAddress": "54.251.53.169",
-      "password": "$2a$10$eYKdlq3P00l7WrtWtQIXJum33MAssV8PF3HlvLs4wH8tJlvjZ6EDy"
+      "password": "$2a$10$eYKdlq3P00l7WrtWtQIXJum33MAssV8PF3HlvLs4wH8tJlvjZ6EDy",
+      "role": 2
     },
     {
       "id": 3,
@@ -39,7 +37,8 @@
       "email": "wdigiacomo2@de.vu",
       "address": "554 Anniversary Court",
       "ipAddress": "135.150.119.214",
-      "password": "$2a$10$dfdLJiALMTevmdiv7Lhw1Oxm03iCCssZp4bsenR9DDkeva4GPWhGO"
+      "password": "$2a$10$dfdLJiALMTevmdiv7Lhw1Oxm03iCCssZp4bsenR9DDkeva4GPWhGO",
+      "role": 1
     },
     {
       "id": 4,
@@ -48,7 +47,8 @@
       "email": "jcolthurst3@imageshack.us",
       "address": "36005 Springs Trail",
       "ipAddress": "166.2.56.217",
-      "password": "$2a$10$YLlv6HwTGT/7reyRWkCiu.1vBUXsd634v45icTa1YSJcSyTVZPOma"
+      "password": "$2a$10$YLlv6HwTGT/7reyRWkCiu.1vBUXsd634v45icTa1YSJcSyTVZPOma",
+      "role": 0
     },
     {
       "id": 5,

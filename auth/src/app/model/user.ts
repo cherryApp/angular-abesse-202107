@@ -7,4 +7,5 @@ export class User {
   ipAddress?: string = '';
   token?: string = '';
   password?: string = '';
+  role?: number = 0; // 0: visitor, 1: viewer, 2: editor, 3: admin
 }
