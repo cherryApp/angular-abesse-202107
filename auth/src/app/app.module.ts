@@ -1,6 +1,6 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { UserEditComponent } from './page/user-edit/user-edit.component';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { NavComponent } from './common/nav/nav.component';
 import { ConfigService } from './service/config.service';
+import { JwtInterceptor } from './service/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,12 @@ import { ConfigService } from './service/config.service';
       useFactory: (service: ConfigService) => service.bootstrap(),
       deps: [ConfigService, HttpClient],
       multi: true,
-    }
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent]
 })

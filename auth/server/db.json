@@ -1,8 +1,17 @@
 {
   "navItems": [
-    {"url": "/", "text": "Home"},
-    {"url": "/user", "text": "User"},
-    {"url": "/login", "text": "Login"}
+    {
+      "url": "/",
+      "text": "Home"
+    },
+    {
+      "url": "/user",
+      "text": "User"
+    },
+    {
+      "url": "/login",
+      "text": "Login"
+    }
   ],
   "users": [
     {
@@ -11,7 +20,8 @@
       "lastName": "Redan",
       "email": "dredan0@usda.gov",
       "address": "29654 Carey Hill",
-      "ipAddress": "141.97.91.0"
+      "ipAddress": "141.97.91.0",
+      "password": "$2a$10$3GfuaArLil4JnQ6yu/tBEOXjrB81FEFUr7sU6AClcYFuao9yoW61i"
     },
     {
       "id": 2,
@@ -19,7 +29,8 @@
       "lastName": "Dracey",
       "email": "sdracey1@latimes.com",
       "address": "46 Prairie Rose Circle",
-      "ipAddress": "54.251.53.169"
+      "ipAddress": "54.251.53.169",
+      "password": "$2a$10$eYKdlq3P00l7WrtWtQIXJum33MAssV8PF3HlvLs4wH8tJlvjZ6EDy"
     },
     {
       "id": 3,
@@ -27,7 +38,8 @@
       "lastName": "Di Giacomo",
       "email": "wdigiacomo2@de.vu",
       "address": "554 Anniversary Court",
-      "ipAddress": "135.150.119.214"
+      "ipAddress": "135.150.119.214",
+      "password": "$2a$10$dfdLJiALMTevmdiv7Lhw1Oxm03iCCssZp4bsenR9DDkeva4GPWhGO"
     },
     {
       "id": 4,
@@ -35,7 +47,8 @@
       "lastName": "Colthurst",
       "email": "jcolthurst3@imageshack.us",
       "address": "36005 Springs Trail",
-      "ipAddress": "166.2.56.217"
+      "ipAddress": "166.2.56.217",
+      "password": "$2a$10$YLlv6HwTGT/7reyRWkCiu.1vBUXsd634v45icTa1YSJcSyTVZPOma"
     },
     {
       "id": 5,
@@ -43,7 +56,8 @@
       "lastName": "Guyer",
       "email": "dguyer4@discovery.com",
       "address": "2 Knutson Parkway",
-      "ipAddress": "30.107.154.206"
+      "ipAddress": "30.107.154.206",
+      "password": "$2a$10$LcHK4aeVClKM1YgJFVn1ZORHteM11aYQhd/8dEO7ozw/7b7hslbse"
     },
     {
       "id": 6,
@@ -51,7 +65,8 @@
       "lastName": "Kincey",
       "email": "akincey5@yahoo.com",
       "address": "860 Luster Drive",
-      "ipAddress": "125.153.64.197"
+      "ipAddress": "125.153.64.197",
+      "password": "$2a$10$p5b8r1oJ7TnAxbSUDQz.pu1M83uBHYn81jz8ZF9UY1bUq.N8vSdMO"
     },
     {
       "id": 7,
@@ -59,7 +74,8 @@
       "lastName": "Limeburner",
       "email": "rlimeburner6@storify.com",
       "address": "3 Lukken Avenue",
-      "ipAddress": "188.147.177.28"
+      "ipAddress": "188.147.177.28",
+      "password": "$2a$10$mbnZEisqhp/iQv2ZUL5LRO8qRtnTx1N4Mg9Y2/SEqR0Se0vratq06"
     },
     {
       "id": 8,
@@ -67,7 +83,8 @@
       "lastName": "Concannon",
       "email": "aconcannon7@odnoklassniki.ru",
       "address": "23156 Northland Drive",
-      "ipAddress": "184.66.34.154"
+      "ipAddress": "184.66.34.154",
+      "password": "$2a$10$LWCtEY4lShcmaGJrHXgV/eGt/fBfaq3dieTw4wX2XHaXgO6mOecoK"
     },
     {
       "id": 9,
@@ -75,7 +92,8 @@
       "lastName": "Harnetty",
       "email": "pharnetty8@cnbc.com",
       "address": "99 Sachs Hill",
-      "ipAddress": "50.146.218.202"
+      "ipAddress": "50.146.218.202",
+      "password": "$2a$10$o90hnZdfht2DR2NWfG5syeoNcY89thI.QsrI5oF8XrM8zL2fMS91q"
     },
     {
       "id": 10,
@@ -83,7 +101,8 @@
       "lastName": "Burnhill",
       "email": "lburnhill9@miitbeian.gov.cn",
       "address": "7956 Dovetail Pass",
-      "ipAddress": "124.68.50.165"
+      "ipAddress": "124.68.50.165",
+      "password": "$2a$10$H0dlLZH80AG8ZT5u94lJ7.zadHfHzjEJW6hWsOFn20pPGWF/OgBQe"
     },
     {
       "id": 11,
