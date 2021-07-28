@@ -38,6 +38,15 @@ const routes: Routes = [
     component: ForbiddenComponent,
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    canActivate: [LoginGuard, RoleGuard],
+    canLoad: [LoginGuard, RoleGuard],
+    data: {
+      role: 3,
+    },
+  },
+  {
     path: '**',
     redirectTo: '',
   },

@@ -14,6 +14,7 @@ import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { NavComponent } from './common/nav/nav.component';
 import { ConfigService } from './service/config.service';
 import { JwtInterceptor } from './service/jwt.interceptor';
+import { FibonacciPipe } from './pipe/fibonacci.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { JwtInterceptor } from './service/jwt.interceptor';
     UserEditComponent,
     ForbiddenComponent,
     NavComponent,
+    FibonacciPipe,
   ],
   imports: [
     BrowserModule,
