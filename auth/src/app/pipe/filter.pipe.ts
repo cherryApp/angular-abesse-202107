@@ -13,7 +13,7 @@ export class FilterPipe<T> implements PipeTransform {
     phrase = phrase.toLowerCase();
 
     return list.filter( item => {
-      return Object.values( (item as T) ).join('').toLowerCase().includes(phrase);
+      return Object.values( (item as T) ).some( val => String(val).toLowerCase().includes(phrase) );
     });
   }
 

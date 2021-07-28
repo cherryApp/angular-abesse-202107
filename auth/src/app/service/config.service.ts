@@ -7,6 +7,17 @@ export interface INavItem {
   text: string;
 }
 
+export interface IUserTableColumn {
+  key: string;
+  title: string;
+  pipes?: any[];
+  pipeArgs?: any[][];
+}
+
+export interface ISetttings {
+  navItems: INavItem[];
+  userTableColumns: IUserTableColumn[];
+}
 
 @Injectable({
   providedIn: 'root'
@@ -19,14 +30,21 @@ export class ConfigService {
     {url: '/', text: 'Home'},
   ]);
 
+  userTableColumns$: BehaviorSubject<IUserTableColumn[]> = new BehaviorSubject<IUserTableColumn[]>([
+    {key: 'id', title: '#'},
+  ]);
+
   constructor(
     private http: HttpClient,
   ) { }
 
   bootstrap(): () => void {
     return (): void => {
-      this.http.get<INavItem[]>(`${this.apiUrl}navItems`).subscribe(
-        items => this.navItems$.next(items)
+      this.http.get<ISetttings>(`${this.apiUrl}settings`).subscribe(
+        settings => {
+          this.navItems$.next(settings.navItems);
+          this.userTableColumns$.next(settings.userTableColumns);
+        }
       );
     }
   }

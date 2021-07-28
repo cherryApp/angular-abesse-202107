@@ -1,18 +1,29 @@
 {
-  "navItems": [
-    {
-      "url": "/",
-      "text": "Home"
-    },
-    {
-      "url": "/user",
-      "text": "User"
-    },
-    {
-      "url": "/admin",
-      "text": "Admin"
-    }
-  ],
+  "settings": {
+    "navItems": [
+      {
+        "url": "/",
+        "text": "Home"
+      },
+      {
+        "url": "/user",
+        "text": "User"
+      },
+      {
+        "url": "/admin",
+        "text": "Admin"
+      }
+    ],
+    "userTableColumns": [
+      {"key": "firstName", "title": "First Name"},
+      {"key": "lastName", "title": "Last Name"},
+      {"key": "email", "title": "Email"},
+      {"key": "address", "title": "Address"},
+      {"key": "ipAddress", "title": "IP."},
+      {"key": "role", "title": "Role"}
+    ]
+
+  },
   "users": [
     {
       "id": 1,
