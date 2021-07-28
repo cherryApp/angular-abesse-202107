@@ -9,13 +9,19 @@ const fibonacci = (num: number): number => {
   return fibonacci(num - 1) + fibonacci(num - 2);
 };
 
+const cache = new Map();
+
 @Pipe({
   name: 'fibonacci'
 })
 export class FibonacciPipe implements PipeTransform {
 
   @memo({
-    resolver: (...args) => `key-${args[0]}`
+    resolver: (...args) => {
+      console.log(cache);
+      return `key-${args[0]}`;
+    },
+    cache
   })
   transform(value: number): number {
     return fibonacci(value);
