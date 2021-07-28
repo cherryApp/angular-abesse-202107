@@ -17,6 +17,8 @@ import { JwtInterceptor } from './service/jwt.interceptor';
 import { FibonacciPipe } from './pipe/fibonacci.pipe';
 import { SearchFieldComponent } from './common/search-field/search-field.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { IndexMapperPipe } from './pipe/index-mapper.pipe';
+import { XpipePipe } from './pipe/xpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     FibonacciPipe,
     SearchFieldComponent,
     FilterPipe,
+    IndexMapperPipe,
+    XpipePipe,
   ],
   imports: [
     BrowserModule,

@@ -14,13 +14,19 @@
         "text": "Admin"
       }
     ],
+    "roles": [
+      "visitor",
+      "viewer",
+      "editor",
+      "admin"
+    ],
     "userTableColumns": [
       {"key": "firstName", "title": "First Name"},
       {"key": "lastName", "title": "Last Name"},
       {"key": "email", "title": "Email"},
-      {"key": "address", "title": "Address"},
+      {"key": "address", "title": "Address", "pipes": ["SlicePipe"], "pipeArgs": [[0, 15]]},
       {"key": "ipAddress", "title": "IP."},
-      {"key": "role", "title": "Role"}
+      {"key": "role", "title": "Role", "pipes": ["RolePipe"]}
     ]
 
   },

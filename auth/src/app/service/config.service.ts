@@ -1,13 +1,15 @@
+import { SlicePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, PipeTransform } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { IndexMapperPipe } from '../pipe/index-mapper.pipe';
 
 export interface INavItem {
   url: string;
   text: string;
 }
 
-export interface IUserTableColumn {
+export interface ITableColumn {
   key: string;
   title: string;
   pipes?: any[];
@@ -16,7 +18,8 @@ export interface IUserTableColumn {
 
 export interface ISetttings {
   navItems: INavItem[];
-  userTableColumns: IUserTableColumn[];
+  userTableColumns: ITableColumn[];
+  roles: string[];
 }
 
 @Injectable({
@@ -30,9 +33,11 @@ export class ConfigService {
     {url: '/', text: 'Home'},
   ]);
 
-  userTableColumns$: BehaviorSubject<IUserTableColumn[]> = new BehaviorSubject<IUserTableColumn[]>([
+  userTableColumns$: BehaviorSubject<ITableColumn[]> = new BehaviorSubject<ITableColumn[]>([
     {key: 'id', title: '#'},
   ]);
+
+  roles$: BehaviorSubject<string[]> = new BehaviorSubject<string[]>([]);
 
   constructor(
     private http: HttpClient,
@@ -42,10 +47,23 @@ export class ConfigService {
     return (): void => {
       this.http.get<ISetttings>(`${this.apiUrl}settings`).subscribe(
         settings => {
+          this.roles$.next(settings.roles);
           this.navItems$.next(settings.navItems);
-          this.userTableColumns$.next(settings.userTableColumns);
+          const columns = settings.userTableColumns.map( col => {
+            col.pipes = col.pipes ? col.pipes.map( p => this.getPipe(p) ) : [];
+            return col;
+          });
+          this.userTableColumns$.next(columns);
         }
       );
     }
   }
+
+  getPipe(name: string): any {
+    return {
+      RolePipe: new IndexMapperPipe(this.roles$.value),
+      SlicePipe: new SlicePipe()
+    }[name];
+  }
+
 }
